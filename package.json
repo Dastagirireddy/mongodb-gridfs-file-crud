@@ -1,0 +1,19 @@
+{
+  "name": "mongo-cache-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-multiparty": "^2.0.0",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "gridfs-stream": "^1.1.1",
+    "mongoose": "^4.7.6",
+    "mongoose-cache": "^0.1.4"
+  }
+}

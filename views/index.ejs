@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MongoDB Files</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<style>
+		.btn > a{
+			color: #fff;
+		}
+	</style>
+</head>
+<body class="container">
+	<h1 class="text-center page-header">Mongodb File CRUD with Gridfs</h1>
+	<div>
+	<form action="/api/v1/docs/upload" method="post" enctype="multipart/form-data">
+		<div class="form-group">
+			<input required class="form-control" type="file" name="image">
+		</div>
+		<div class="form-group">
+			<button class="btn btn-danger" type="submit">Upload</button>
+		</div>
+	</form>
+	</div>
+	<table class="table table-bordered">
+		<thead>
+			<tr><th>FileName</th><th>Action</th></tr>
+		</thead>
+		<tbody>
+		<% for (var i = 0; i < docs.length; i++) { -%>
+			<tr>
+				<td><%= docs[i].filename %></td>
+				<td><button class="btn btn-primary"><a href="/api/v1/docs/download/<%= docs[i].filename%>"><span class="glyphicon glyphicon-download"></span></a></button> <button class="btn btn-danger"><a href="/api/v1/docs/delete/<%= docs[i].filename%>"><span class="glyphicon glyphicon-trash"></span></a></button></td>
+			</tr>
+		<% } -%>
+		</tbody>
+	</table>
+</body>
+</html>
