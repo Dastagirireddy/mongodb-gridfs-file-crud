@@ -8,7 +8,7 @@ Grid.mongo = mongoose.mongo;
 
 class Doc {
     constructor() {
-        this.mongoUrl = process.env.MONGO_DB || 'mongodb://localhost:27017/docs';
+        this.mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost:27017/docs';
         this.connect();
     }
 
