@@ -29,7 +29,7 @@
 		<tbody>
 		<% for (var i = 0; i < docs.length; i++) { -%>
 			<tr>
-				<td><a href="/api/v1/docs/<%= docs[i].filename %>"><%= docs[i].filename %></a></td>
+				<td><a href="/api/v1/docs/<%= docs[i].filename %>" target="_blank"><%= docs[i].filename %></a></td>
 				<td><button class="btn btn-primary"><a href="/api/v1/docs/download/<%= docs[i].filename%>"><span class="glyphicon glyphicon-download"></span></a></button> <button class="btn btn-danger"><a href="/api/v1/docs/delete/<%= docs[i].filename%>"><span class="glyphicon glyphicon-trash"></span></a></button></td>
 			</tr>
 		<% } -%>
